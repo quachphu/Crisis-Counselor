@@ -1,0 +1,13 @@
+[build]
+  dockerfile_path = "backend.dockerfile"
+
+[deployment]
+  name = "crisis-bot"
+  entry_point = "pipecat_bot:bot"
+  min_replicas = 1
+  max_replicas = 5
+  start_timeout_secs = 120
+
+[deployment.environment]
+  NEMOTRON_ENABLE_THINKING = "false"
+  ENV = "production"

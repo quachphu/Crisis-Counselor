@@ -1,0 +1,18 @@
+# Node
+node_modules/
+.next/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+.env
+
+# OS
+.DS_Store
+
+# Firebase secrets — never commit
+firebase-service-account.json

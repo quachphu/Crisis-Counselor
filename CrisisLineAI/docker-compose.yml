@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    ports:
+      - "1000:1000"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: frontend.dockerfile
+    environment:
+      - API_BASE_URL=http://backend:1000
+      - DOCKER_CONTAINER=true
+    ports:
+      - "3000:3000"

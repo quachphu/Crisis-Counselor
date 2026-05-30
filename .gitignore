@@ -16,3 +16,4 @@ dist/
 
 # Firebase secrets — never commit
 firebase-service-account.json
+.env.local
